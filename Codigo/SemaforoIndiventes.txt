@@ -1,0 +1,99 @@
+// Apellido y nombre: Soria Belen
+// Curso: 1° D
+// Dojo: D
+// Ejercicio: 1
+/*
+---------------------Ejercicio: 1------------------------------------
+El gobierno de la ciudad quiere actualizar los semáforos que tiene
+instalados.
+La empresa  “UTNFRA Robotics” ganó la licitación y ahora les toca a
+los desarrolladores de la empresa generar  un proyecto low cost que
+cumpla con las especificaciones que el gobierno de la ciudad nos
+impone, a saber las especificaciones
+son las siguientes. 
+1 - LA PRIMER  ENTREGA SERÁ LO SIGUIENTE, 
+1- El semáforo tiene que tener 2 leds de cada color como mínimo,
+en caso de que uno se  rompa. 
+2- Tiene que implementar los tiempos correctos como se detallan a
+continuación.
+3- El verde dura 5 segundos. 
+4- El amarillo dura 3 segundos. 
+5- Rojo dura 5 segundos. 
+6- Tiene que tener señalización para personas no videntes como se
+detalla a continuación. (Buzzer o piezo)
+7- Durante el rojo: Tiene que sonar 2 vez por segundo en un tono
+FUERTE. 
+---------------------------------------------------------------------
+*/
+
+#define LED_ROJO_A 10 
+#define LED_ROJO_B 9
+#define LED_AMARILLO_A 6
+#define LED_AMARILLO_B 5
+#define LED_VERDE_A 4
+#define LED_VERDE_B 3
+
+#define BUZZER 2
+
+#define TIEMPO_AMARILLO 3000
+#define TIEMPO_VERDE 5000
+
+void PrenderApagarLeds();
+void PrenderApagardLedRojoBuzzer();
+
+void setup()
+{
+  
+  pinMode(LED_ROJO_A, OUTPUT);
+  pinMode(LED_ROJO_B, OUTPUT);
+  pinMode(LED_AMARILLO_A, OUTPUT);
+  pinMode(LED_AMARILLO_B, OUTPUT);
+  pinMode(LED_VERDE_A, OUTPUT);
+  pinMode(LED_VERDE_B, OUTPUT);
+  pinMode(BUZZER, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  PrenderApagarLeds(LED_VERDE_A,LED_VERDE_B, TIEMPO_VERDE);
+  PrenderApagarLeds(LED_AMARILLO_A, LED_AMARILLO_B, TIEMPO_AMARILLO);
+  PrenderApagardLedRojoBuzzer(LED_ROJO_A,LED_ROJO_B, BUZZER);
+  PrenderApagarLeds(LED_AMARILLO_A, LED_AMARILLO_B, TIEMPO_AMARILLO);
+}
+
+void PrenderApagarLeds(int led, int led_repuesto, int tiempo)
+{
+  Serial.print("Prendido: ");
+ if(led == LED_VERDE_A || led == LED_VERDE_B)
+ {
+   Serial.println("Led verde por 5 segundos.");
+ }
+  else
+ {
+   Serial.println("Led Amarilla por 3 segundos.");
+ }
+ digitalWrite(led, HIGH);
+ digitalWrite(led_repuesto, HIGH);
+ delay(tiempo);
+ digitalWrite(led, LOW);
+ digitalWrite(led_repuesto, LOW);
+}
+
+void PrenderApagardLedRojoBuzzer(int led,int led_repuesto, int buzzer)
+{
+  Serial.println("Prendido: Led rojo y buffer por 5 segundos.");
+  int i;
+  digitalWrite(led, HIGH);
+  digitalWrite(led_repuesto, HIGH);
+  for (i = 0; i < 5;i++)
+  {
+    tone(buzzer, 1000,50);
+    delay(450);
+    tone(buzzer, 1000,50);
+    delay(450);
+  }
+  digitalWrite(led, LOW);
+  digitalWrite(led_repuesto, LOW);
+  digitalWrite(led_repuesto, LOW);
+}

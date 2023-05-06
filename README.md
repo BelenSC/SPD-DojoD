@@ -37,8 +37,6 @@ void loop()
 
 ## :frog: Link al proyecto
 - [proyecto](https://www.tinkercad.com/things/i5YadsTv6GA-1d-dojo-d-soria/editel?sharecode=NJgFzQIbBMTWZXhFoCaBf0GYQ75TVjQc9fx_lACDTSc)
-## :tv: Link al video del proceso
-- [video](https://www.youtube.com/watch?v=VyGjE8kx-O0)
 
 ---
 ### Fuentes
