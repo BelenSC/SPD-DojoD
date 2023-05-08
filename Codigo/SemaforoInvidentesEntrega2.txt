@@ -1,0 +1,160 @@
+// Apellido y nombre: Soria Belen
+// Curso: 1° D
+// Dojo: D
+// Ejercicio: 2
+/*
+--------------------------------------------------------------------------------
+El gobierno de la ciudad quiere actualizar los semáforos que tiene instalados.
+La empresa  “UTNFRA Robotics” ganó la licitación y ahora les toca a los desarro-
+lladores de la empresa generar  un proyecto low cost que cumpla con las especifi-
+caciones que el gobierno de la ciudad nos  impone, a saber las especificaciones
+son las siguientes. 
+2 - LA SEGUNDA ENTREGA AGREGA LO SIGUIENTE EN UN NUEVO PROYECTO, 
+8-  Durante el amarillo: Tiene que sonar 1 vez por segundo en un tono SUAVE. 
+9- Al cambiar de verde a amarillo debe titilar 3 veces el verde antes de pasar
+al amarillo
+10- Al cambiar de amarillo a rojo se debe titilar 3 veces el amarillo
+11- Al cambiar de rojo a Amarillo se debe titilar 3 veces el rojo
+12- Al cambiar de amarillo a verde se debe titilar 3 veces el amarillo.
+--------------------------------------------------------------------------------
+*/
+
+#define LED_ROJO_A 10 
+#define LED_ROJO_B 9
+#define LED_AMARILLO_A 6
+#define LED_AMARILLO_B 5
+#define LED_VERDE_A 4
+#define LED_VERDE_B 3
+
+#define BUZZER 2
+
+#define TIEMPO_AMARILLO 3000
+#define TIEMPO_VERDE 5000
+
+void PrenderApagarLeds(int led, int led_repuesto, int tiempo);
+void PrenderApagarLedBuzzer(int led,int led_repuesto,int buzzer,int buzzer_tiempo_segundos);
+void PrenderApagarBuffer(int buzzer, int tiempo_segundos, int cantidad_sonido_segundo);
+void Prender(int led,int led_repuesto);
+void Apagar(int led,int led_repuesto);
+void Titilar(int led_titilar, int led_titilar_repuesto);
+
+int tiempo_buffer_amarillo_segundos = 3;
+int tiempo_buffer_rojo_segundos = 5;
+ 
+void setup()
+{
+  
+  pinMode(LED_ROJO_A, OUTPUT);
+  pinMode(LED_ROJO_B, OUTPUT);
+  pinMode(LED_AMARILLO_A, OUTPUT);
+  pinMode(LED_AMARILLO_B, OUTPUT);
+  pinMode(LED_VERDE_A, OUTPUT);
+  pinMode(LED_VERDE_B, OUTPUT);
+  pinMode(BUZZER, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  PrenderApagarLeds(LED_VERDE_A, LED_VERDE_B, TIEMPO_VERDE);
+  Titilar(LED_VERDE_A, LED_VERDE_B);
+  
+  PrenderApagarLedBuzzer(LED_AMARILLO_A, LED_AMARILLO_B, BUZZER, tiempo_buffer_amarillo_segundos);
+  Titilar(LED_AMARILLO_A, LED_AMARILLO_B);
+  
+  PrenderApagarLedBuzzer(LED_ROJO_A, LED_ROJO_B, BUZZER, tiempo_buffer_rojo_segundos);
+  Titilar(LED_ROJO_A, LED_ROJO_B);
+  
+  PrenderApagarLedBuzzer(LED_AMARILLO_A, LED_AMARILLO_B, BUZZER, tiempo_buffer_amarillo_segundos);
+  Titilar(LED_AMARILLO_A, LED_AMARILLO_B);
+}
+
+void PrenderApagarLeds(int led, int led_repuesto, int tiempo)
+{
+  Serial.print("Prendido: ");
+ if(led == LED_VERDE_A || led == LED_VERDE_B)
+ {
+   Serial.println("Led verde por 5 segundos.");
+ }
+  else
+ {
+   Serial.println("Led Amarilla por 3 segundos.");
+ }
+ digitalWrite(led, HIGH);
+ digitalWrite(led_repuesto, HIGH);
+ delay(tiempo);
+ digitalWrite(led, LOW);
+ digitalWrite(led_repuesto, LOW);
+}
+
+void PrenderApagarLedBuzzer(int led,int led_repuesto,int buzzer,int buzzer_tiempo_segundos)
+{
+  digitalWrite(led, HIGH);
+  digitalWrite(led_repuesto, HIGH);
+  if(led == LED_ROJO_A || led == LED_ROJO_B)
+ {
+    Serial.println("Prendido: Led rojo 5 segundos y buffer suena 2 veces por segundo.");
+    PrenderApagarBuffer(buzzer,buzzer_tiempo_segundos,2);
+ }
+  else
+ {
+    if(led == LED_AMARILLO_A || led == LED_AMARILLO_B)
+    {
+      Serial.println("Prendido: Led amarillo por 3 segundos y buffer suena 1 vez por segundo.");
+	  PrenderApagarBuffer(buzzer,buzzer_tiempo_segundos,1);
+    }
+ }
+  digitalWrite(led, LOW);
+  digitalWrite(led_repuesto, LOW);
+}
+
+void PrenderApagarBuffer (int buzzer, int tiempo_segundos, int cantidad_sonido_segundo)//1
+{
+  int i;
+  if (cantidad_sonido_segundo == 2)
+  {
+    for (i = 0; i < tiempo_segundos;i++)
+    {
+      tone(buzzer, 1000,50);
+      delay(450);
+      tone(buzzer, 1000,50);
+      delay(450);
+    }
+  }
+  else
+  {
+   if (cantidad_sonido_segundo == 1)
+    {
+       for (i = 0; i < tiempo_segundos;i++)
+       {
+         tone(buzzer, 300,50);
+         delay(950);
+       }
+    }
+  }
+}
+
+void Prender(int led, int led_repuesto)
+{
+  digitalWrite(led, HIGH);
+  digitalWrite(led_repuesto, HIGH);
+  delay(333);
+}
+
+void Apagar(int led,int led_repuesto)
+{
+  digitalWrite(led, LOW);
+  digitalWrite(led_repuesto, LOW);
+  delay(333);
+}
+
+void Titilar(int led_titilar, int led_titilar_repuesto)
+{
+  Serial.println("Titila 3 veces en 1 segundo.");
+  Prender(led_titilar,led_titilar_repuesto);
+  Apagar(led_titilar,led_titilar_repuesto);
+  Prender(led_titilar,led_titilar_repuesto);
+  Apagar(led_titilar,led_titilar_repuesto);
+  Prender(led_titilar,led_titilar_repuesto);
+  Apagar(led_titilar,led_titilar_repuesto);
+}
