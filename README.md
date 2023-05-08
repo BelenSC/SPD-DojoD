@@ -42,7 +42,7 @@ void loop()
 
 - [Belen Soria: proyecto entrega n°1](https://www.tinkercad.com/things/i5YadsTv6GA-1d-dojo-d-soria/editel?sharecode=NJgFzQIbBMTWZXhFoCaBf0GYQ75TVjQc9fx_lACDTSc)
 
-## :
+## :keycap_ten:
 
 - [Thiago Rodríguez: proyecto semaforo entrega n°1](https://www.tinkercad.com/things/fSnegusuI81-brave-elzing/editel?sharecode=V6gH1mG6p_U0Ck5-6Gz9RrXBJ6MydZY3HOWQgdQ9Vzk)
 
@@ -101,7 +101,7 @@ void PrenderApagarLedBuzzer(int led,int led_repuesto,int buzzer,int buzzer_tiemp
 ## :frog: Link al proyecto
 - Belen Soria
 - [Proyecto semaforo entrega n°2](https://www.tinkercad.com/things/8tWmp2zrRWh-1d-dojo-d-ej-n2-soria-belen-2023-/editel)
-## :
+## :shipit:
 - Thiago Rodríguez
 - [Proyecto semaforo entrega n°2](https://www.tinkercad.com/things/h5oIiVFxzgR-thiago-rodriguez-divd/editel?sharecode=jJqcy1OoAR5w1sQz9vH64kyxpN5jdOwAbp42giW3hAI)
 - Ivan Sacks
