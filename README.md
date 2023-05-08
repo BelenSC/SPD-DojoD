@@ -38,7 +38,18 @@ void loop()
 ~~~
 
 ## :traffic_light: Link al proyecto
+- Belen Soria
 - [proyecto](https://www.tinkercad.com/things/i5YadsTv6GA-1d-dojo-d-soria/editel?sharecode=NJgFzQIbBMTWZXhFoCaBf0GYQ75TVjQc9fx_lACDTSc)
+
+## :
+- Thiago Rodríguez
+- [Proyecto semaforo entrega n°2](https://www.tinkercad.com/things/fSnegusuI81-brave-elzing/editel?sharecode=V6gH1mG6p_U0Ck5-6Gz9RrXBJ6MydZY3HOWQgdQ9Vzk)
+- Ivan Sacks
+- [Proyecto semaforo entrega n°2](https://www.tinkercad.com/things/0UM3ZlFqdpF-ivan-sacks-dojo-d-ejdojouno/editel?sharecode=t2-icXHy_uBGoIYf1aFnwEec6A11fBIYcaKNgTn3M8s)
+- Melina Silva
+- [Proyecto semaforo entrega n°2](https://www.tinkercad.com/things/hGqbTTxUfho-silva-diana-melina-dojo-1er-entrega/editel?sharecode=diDpH0etaLIy7b9uQ6Pxcf6Gd4nUVIl9WMyQGoO1VQw)
+- Franco Sofia
+- [Proyecto semaforo entrega n°2](https://www.tinkercad.com/things/cADprBpRUZb-copy-of-dojo-d-ejercicio-02-franco-sofia/editel?sharecode=s49qYkW5lOgLgG1-rdUSvXFMocdVisnxHcHN4Yv2QlY)
 
 ---
 
@@ -86,6 +97,7 @@ void PrenderApagarLedBuzzer(int led,int led_repuesto,int buzzer,int buzzer_tiemp
 ~~~
 
 ## :frog: Link al proyecto
+- Belen Soria
 - [Proyecto semaforo entrega n°2](https://www.tinkercad.com/things/8tWmp2zrRWh-1d-dojo-d-ej-n2-soria-belen-2023-/editel)
 ## :
 - Thiago Rodríguez
