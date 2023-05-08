@@ -9,7 +9,7 @@
 - Melina Silva
 - Franco Sofia
 
-# Proyectos
+#### Proyectos
 Nota: Aquí se encuentra las entregas correspondientes al proyecto en orden ascendente.
 
 ## Proyecto: Dojo, Semaforo para invidentes.
