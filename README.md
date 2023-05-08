@@ -41,7 +41,7 @@ void loop()
 ## :traffic_light: Link al proyecto :keycap_ten:
 - [Belen Soria proyecto entrega n°1](https://www.tinkercad.com/things/i5YadsTv6GA-1d-dojo-d-soria/editel?sharecode=NJgFzQIbBMTWZXhFoCaBf0GYQ75TVjQc9fx_lACDTSc)
 
-## Link al proyecto de los integrantes
+## :chart_with_upwards_trend: Link al proyecto de los integrantes :chart_with_upwards_trend:
 - [Thiago Rodríguez entrega n°1](https://www.tinkercad.com/things/fSnegusuI81-brave-elzing/editel?sharecode=V6gH1mG6p_U0Ck5-6Gz9RrXBJ6MydZY3HOWQgdQ9Vzk)
 
 - [Ivan Sacks entrega n°1](https://www.tinkercad.com/things/0UM3ZlFqdpF-ivan-sacks-dojo-d-ejdojouno/editel?sharecode=t2-icXHy_uBGoIYf1aFnwEec6A11fBIYcaKNgTn3M8s)
@@ -98,7 +98,7 @@ void PrenderApagarLedBuzzer(int led,int led_repuesto,int buzzer,int buzzer_tiemp
 
 ## :shipit: Link al proyecto :frog:
 - [Belen Soria entrega n°2](https://www.tinkercad.com/things/8tWmp2zrRWh-1d-dojo-d-ej-n2-soria-belen-2023-/editel)
-## Link al proyecto de los integrantes
+## :chart_with_upwards_trend: Link al proyecto de los integrantes :chart_with_upwards_trend:
 - [Thiago Rodríguez entrega n°2](https://www.tinkercad.com/things/h5oIiVFxzgR-thiago-rodriguez-divd/editel?sharecode=jJqcy1OoAR5w1sQz9vH64kyxpN5jdOwAbp42giW3hAI)
 
 - [Ivan Sacks entrega n°2](https://www.tinkercad.com/things/kvZvP1zrmdb-ivan-sacks-dojo-d-ej2dojouno/editel?sharecode=FvJYjORmQpISy3dMQHERxsrFIkP-lHxH9M1NDHK18Qk)
