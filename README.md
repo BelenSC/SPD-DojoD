@@ -6,7 +6,6 @@
 - Belen Soria
 - Thiago Rodríguez
 - Ivan Sacks
-- Melina Silva
 - Franco Sofia
 
 #### Proyectos
@@ -45,8 +44,6 @@ void loop()
 - [Thiago Rodríguez entrega n°1](https://www.tinkercad.com/things/fSnegusuI81-brave-elzing/editel?sharecode=V6gH1mG6p_U0Ck5-6Gz9RrXBJ6MydZY3HOWQgdQ9Vzk)
 
 - [Ivan Sacks entrega n°1](https://www.tinkercad.com/things/0UM3ZlFqdpF-ivan-sacks-dojo-d-ejdojouno/editel?sharecode=t2-icXHy_uBGoIYf1aFnwEec6A11fBIYcaKNgTn3M8s)
-
-- [Melina Silva entrega n°1](https://www.tinkercad.com/things/hGqbTTxUfho-silva-diana-melina-dojo-1er-entrega/editel?sharecode=diDpH0etaLIy7b9uQ6Pxcf6Gd4nUVIl9WMyQGoO1VQw)
 
 - [Franco Sofia entrega n°1](https://www.tinkercad.com/things/cADprBpRUZb-copy-of-dojo-d-ejercicio-02-franco-sofia/editel?sharecode=s49qYkW5lOgLgG1-rdUSvXFMocdVisnxHcHN4Yv2QlY)
 
@@ -99,14 +96,57 @@ void PrenderApagarLedBuzzer(int led,int led_repuesto,int buzzer,int buzzer_tiemp
 ## :chart_with_upwards_trend: Link al proyecto :frog:
 - [Belen Soria entrega n°2](https://www.tinkercad.com/things/8tWmp2zrRWh-1d-dojo-d-ej-n2-soria-belen-2023-/editel)
 ## :chart_with_upwards_trend: Link al proyecto de los integrantes :shipit:
-- [Thiago Rodríguez entrega n°2](https://www.tinkercad.com/things/h5oIiVFxzgR-thiago-rodriguez-divd/editel?sharecode=jJqcy1OoAR5w1sQz9vH64kyxpN5jdOwAbp42giW3hAI)
 
 - [Ivan Sacks entrega n°2](https://www.tinkercad.com/things/kvZvP1zrmdb-ivan-sacks-dojo-d-ej2dojouno/editel?sharecode=FvJYjORmQpISy3dMQHERxsrFIkP-lHxH9M1NDHK18Qk)
 
-- [Melina Silva entrega n°2](https://www.tinkercad.com/things/hGqbTTxUfho-silva-diana-melina-dojo-1er-entrega/editel?sharecode=diDpH0etaLIy7b9uQ6Pxcf6Gd4nUVIl9WMyQGoO1VQw)
-
 - [Franco Sofia entrega n°2](https://www.tinkercad.com/things/6s5M8m5FxDc-copy-of-dojo-d-ejercicio-02-franco-sofia/editel?sharecode=FXjhoH82igXUJB7aCQC95aXAd4CDrPa2xdhEm2jtWgo)
+
+- [Thiago Rodríguez entrega n°2](https://www.tinkercad.com/things/h5oIiVFxzgR-thiago-rodriguez-divd/editel?sharecode=jJqcy1OoAR5w1sQz9vH64kyxpN5jdOwAbp42giW3hAI)
 ---
+
+## Proyecto: Dojo D, Semaforo para invidentes doble.
+### Entrega n° 3
+![Tinkercad](./img/SemaforoDoble3.png)
+
+
+## Descripción
+Codificamos un semaforo doble para invidentes, este hace dos sonidos cuando la luz roja esta prendinda y uno suave cuando la luz amarilla esta prendida.
+Cuenta con un boton que al ser apretado, le da a la persona que lo requiera más tiempo para cruzar la calle. 
+
+## Función principal
+Esta funcion se encarga de verificar si el boton fue presionado, para guardar una varible que determine si el tiempo del led verde se duplicará.
+
+boton_presionado y flag_presionado son variables globales que utilizamos para saber si se presionó el boton.
+
+En la funcion RecibirTiempoLedVerde, primero leemos el estado del boton verde, y si este fue presionado se asigna 1 en el entero flag_presionado y se notifica por pantalla.
+
+
+Y por último, apaga los leds.
+ 
+~~~ C (lenguaje en el que esta escrito)
+
+void RecibirTiempoLedVerde()
+{
+  boton_presionado = digitalRead(BOTON_VERDE);
+  if (boton_presionado == 1)
+  {
+   flag_presionado = 1;
+   Serial.println("La proxima luz verde se duplicara.");
+  } 
+}
+
+~~~
+
+## :chart_with_upwards_trend: Link al proyecto :frog:
+- [Belen Soria entrega n°3](https://www.tinkercad.com/things/ivJPv2cZ5Ja-dojo-d-ej-n3-soria-belen-2023-/editel?sharecode=wJjJ3Cj_9mQjNvK-kEuC4N0wS01l-lZowrSQBpqGSMA)
+## :chart_with_upwards_trend: Link al proyecto de los integrantes :shipit:
+
+- [Ivan Sacks entrega n°3](https://www.tinkercad.com/things/0Lj1zFJznHd-ivan-sacks-dojo-d-ej3dojouno/editel?sharecode=fY1kJMpDqGoj8c3uDOqDfa6-XRFZToHtnDw2Az7gTX8)
+
+- [Franco Sofia entrega n°3](https://www.tinkercad.com/things/8wTiuYKUPQa-dojo-d-ejercicio-03-franco-sofia/editel?sharecode=1S6-n7Oast0jZLrtovg34BKY_gjic5SmJO-DsaHVObM)
+
+- [Thiago Rodríguez entrega n°3](https://www.tinkercad.com/things/cCXng1Xz3y0-copy-of-thiago-rodriguez-divd/editel?sharecode=95E4cJBhtGjh1JUqD6GpHRigzSrKL6J_SnyG1ZMma4I)
+
 ### Fuentes
 - [Consejos para documentar](https://www.sohamkamani.com/how-to-write-good-documentation/#architecture-documentation).
 
